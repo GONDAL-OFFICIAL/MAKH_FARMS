@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,101 +18,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div style="resize: both;" id="BOX">
-        <div id="HEADCONT">
-            <div id="HEADM">
-                <span id="LE1">M</span>
-                <span id="LE2">A</span>
-                <span id="LE3">K</span>
-                <span id="LE4">H</span>
-            </div>
-            <br>
-            <div id="HEADM">
-                <span id="LE1">F</span>
-                <span id="LE2">A</span>
-                <span id="LE3">R</span>
-                <span id="LE4">M</span>
-            </div>
+    <div id="NAVBARM">
+        <div id="RS">
+            <a id="MA" href="./index2.html" style="--clr:#ff1867"><span id="MS">FORM</span><i id="MI"></i></a>
         </div>
-        <div id="CONTAINER">
-            <form method="post" action="" name="submit-to-google-sheet">
-                <div class="FORM">
-                    <input type="text" name="GOAT-ID" required>
-                    <div class="LABELLINE">GOAT ID</div>
-                </div>
-                <div id="GENDER">
-                    <label id="GI" style="--clr: #6be7ff;">
-                        <input id="IG" type="radio" name="GENDER" value="MALE">
-                        <i></i>
-                        <span id="SG">MALE</span>
-                    </label>
-                    <label id="GI" style="--clr: #ff7ab2;">
-                        <input id="IG" type="radio" name="GENDER" value="FEMALE">
-                        <i></i>
-                        <span id="SG">FEMALE</span>
-                    </label>
-                    <label id="GI" style="--clr: #ffa331;">
-                        <input id="IG" type="radio" name="GENDER" value="C.MALE">
-                        <i></i>
-                        <span id="SG">CASTERATED-MALE</span>
-                    </label>
-                </div>
-                <div id="CONCOLOR">
-                    <input type="color" id="STYLE" name="COLOR" value="">
-                </div>
-                <div class="FORM">
-                    <input type="number" name="OFFSPRINGS" required>
-                    <div class="LABELLINE">OFFSPRINGS</div>
-                </div>
-                <div class="FORM">
-                    <input type="number" name="PUNCH-NO." required>
-                    <div class="LABELLINE">PUNCH-NO.</div>
-                </div>
-                <div class="FORM">
-                    <input type="date" name="BIRTH" class="DATE" required>
-                    <div class="LABELLINE">BIRTH</div>
-                </div>
-                <div class="FORM">
-                    <input type="number" name="WEIGHT" required>
-                    <div class="LABELLINE">WEIGHT (lb)</div>
-                </div>
-                <div class="FORM">
-                    <input type="number" name="VACCINATION" required>
-                    <div class="LABELLINE">VACCINATION (YEAR)</div>
-                </div>
-                <div class="FORM">
-                    <input type="date" name="DILIVERY-DATE" class="DATE" required>
-                    <div class="LABELLINE">DILIVERY-DATE</div>
-                </div>
-                <div class="FORM">
-                    <input type="file" name="GOAT-PIC" class="DATE" required>
-                    <div style="padding-left: 171px;" class="LABELLINE">GOAT PIC</div>
-                </div>
-                <div class="FORM">
-                    <input type="submit" value="submit" name="submit" id="SUBMIT">
-                </div>
-            </form>
+        <div id="RS">
+            <a id="MA" href="https://docs.google.com/spreadsheets/d/1pCZAj6gNtnaFnqksPGehsn5ywmhBcxPc3w5sQ_d6RVI/edit#gid=0" target=".main" style="--clr:#1e9bff"><span
+                    id="MS">DATA</span><i id="MI"></i></a>
         </div>
     </div>
-
-
-
-    
-    <script>
-        const scriptURL =
-            'https://script.google.com/macros/s/AKfycbwyDMB6GStUln-bdaE4jidAkPJzXeHUkPNZod2CP5aUIDPtniUibwQ-cRq9WneQ4ZIx/exec'
-
-        const form = document.forms['submit-to-google-sheet']
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => alert("DAGAR DATA ENTRY SUCCUSSFULL."))
-                .then(() => { window.location.reload(); })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
 </body>
 </html>
