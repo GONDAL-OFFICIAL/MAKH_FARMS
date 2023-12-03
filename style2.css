@@ -481,3 +481,9 @@ input:valid+.LABELLINE {
         transform: translateY(0px);
     }
 }
+
+@media (min-width: 300px) and (max-width: 450px) {
+    #BOX {
+        scale: .93;
+    }
+}
