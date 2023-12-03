@@ -484,6 +484,6 @@ input:valid+.LABELLINE {
 
 @media (min-width: 300px) and (max-width: 450px) {
     #BOX {
-        scale: .93;
+        scale: .9;
     }
 }
