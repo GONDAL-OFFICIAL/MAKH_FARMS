@@ -7,6 +7,7 @@
 
 body {
     background: #1a1b24;
+    overflow: hidden;
 }
 
 #NAVBARM {
@@ -20,6 +21,7 @@ body {
     gap: 100px;
     row-gap: 37px;
     z-index: 0;
+    animation: INCOME .75s ease-in-out 0s 1;
     /* padding-bottom: 60px; */
 }
 
@@ -104,4 +106,40 @@ body {
     width: 20px;
     left: 80%;
     transition: .5s;
+}
+
+@keyframes INCOME {
+    0% {
+        opacity: 0;
+        scale: 0;
+        transform: translateY(730px);
+    }
+
+    50% {
+        opacity: 0;
+        scale: .9;
+        transform: translateY(370px);
+    }
+
+    80% {
+        opacity: .73;
+        scale: .9;
+        transform: translateY(300px);
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (min-width: 300px) and (max-width: 450px) {
+    #NAVBARM {
+            flex-direction: column;
+        }
+    
+        #RS {
+            margin-bottom: 67px;
+        }
 }
